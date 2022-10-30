@@ -23,6 +23,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
+    from . import static
+
     from . import landing
     app.register_blueprint(landing.landing_bp)
 
